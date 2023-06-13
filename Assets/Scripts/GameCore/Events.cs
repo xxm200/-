@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-
+using static Types;
 
 public enum GameState
 {
@@ -23,6 +23,13 @@ public static class Events
     public static GameStateChangeEvent GameStateChangeEvent = new GameStateChangeEvent();
     public static InputEvent InputEvent = new InputEvent();
     public static SeriportReciveEvent SeriportReciveEvent = new SeriportReciveEvent();
+    public static RedArmyStateEvent redArmyStateEvent = new RedArmyStateEvent();
+}
+
+
+public class RedArmyStateEvent : GameEvent
+{
+    public RedArmyState redArmyState;
 }
 
 public class SceneEvent : GameEvent
